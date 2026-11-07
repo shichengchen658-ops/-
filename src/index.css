@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: 'ZCOOL KuaiLe';
+  src: url('/fonts/ZCOOLKuaiLe-Extended.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-slate-800 bg-[#f4fbf7] select-none;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+.font-kuaile {
+  font-family: 'ZCOOL KuaiLe', cursive, sans-serif;
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes munch {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.12, 0.92);
+  }
+  50% {
+    transform: scale(0.95, 1.08);
+  }
+  75% {
+    transform: scale(1.08, 0.95);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px) rotate(-3deg); }
+  40% { transform: translateX(6px) rotate(3deg); }
+  60% { transform: translateX(-4px) rotate(-1.5deg); }
+  80% { transform: translateX(4px) rotate(1.5deg); }
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(10px);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes combo-popup {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(10px);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1.2) translateY(-8px);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1) translateY(-22px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.85) translateY(-38px);
+  }
+}
+
+@keyframes streak-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.85), 0 0 40px rgba(239, 68, 68, 0.4);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-munch {
+  animation: munch 0.45s ease-in-out infinite;
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.animate-pop-in {
+  animation: pop-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-combo-popup {
+  animation: combo-popup 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-streak-glow {
+  animation: streak-glow 1.5s ease-in-out infinite;
+}
+
+@keyframes flash-ring {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+@keyframes gold-sparkle {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  30% {
+    transform: scale(1.3) rotate(45deg);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1) rotate(90deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0.4) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+.animate-flash-ring {
+  animation: flash-ring 0.9s cubic-bezier(0.2, 0.8, 0.4, 1) forwards;
+}
+
+.animate-gold-sparkle {
+  animation: gold-sparkle 1.1s ease-out forwards;
+}

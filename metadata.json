@@ -1,0 +1,6 @@
+{
+  "name": "筼筜湖开饭啦！——食物链大挑战",
+  "description": "专为小学三年级科学课设计的筼筜湖湿地生态与食物网趣味互动游戏，认识小白鹭、弹涂鱼、招潮蟹等小动物的食物链关系，守护绿色家园。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
