@@ -185,7 +185,9 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({
       a.download = `筼筜湖生态小卫士奖状_${studentName.replace(/\s+/g, '_')}.png`;
       document.body.appendChild(a);
       a.click();
-      document.body.removeChild(a);
+      if (a.parentNode) {
+        a.parentNode.removeChild(a);
+      }
       setIsExporting(false);
       setHasClaimedAward(true);
     }, 150);
